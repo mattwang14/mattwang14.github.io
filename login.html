@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome to PCC Food Pantry</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="login-body">
+    <div class="login-container">
+        <div class="intro">
+            <h1>Welcome to PCC Food Pantry</h1>
+            <p>Please login or create an account to continue.</p>
+        </div>
+        <div class="form-container">
+            <div id="loginForm" class="form">
+                <h2>Login</h2>
+                <form id="login" onsubmit="return loginUser(event)">
+                    <label for="loginUsername">Username</label>
+                    <input type="text" id="loginUsername" required>
+
+                    <label for="loginPassword">Password</label>
+                    <input type="password" id="loginPassword" required>
+
+                    <button type="submit">Log In</button>
+                    <p class="switch-link" onclick="toggleForm()">New user? Create an account</p>
+                </form>
+            </div>
+            <div id="registerForm" class="form hidden">
+                <h2>Create an Account</h2>
+                <form id="register" onsubmit="return registerUser(event)">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" required>
+
+                    <label for="email">Email</label>
+                    <input type="email" id="email" required>
+
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" required>
+
+                    <label for="password">Password</label>
+                    <input type="password" id="password" required>
+
+                    <label for="confirmPassword">Confirm Password</label>
+                    <input type="password" id="confirmPassword" required>
+
+                    <button type="submit">Create Account</button>
+                    <p class="switch-link" onclick="toggleForm()">Already have an account? Log in</p>
+                </form>
+                <div id="errorMessage" class="error hidden">There was an error creating the account. Please try again.</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

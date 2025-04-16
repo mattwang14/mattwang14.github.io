@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notifications for PCC Food Pantry</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="notification-body">
+    <div class="notification-container">
+        <a class="home-link" href="index.html">&#10229; Return to Home</a>
+        <header class="notification-header">
+            <h1>Notifications for PCC Food Pantry</h1>
+            <p>Manage and send notifications to the subscriber list</p>
+        </header>
+
+        <!-- FormS -->
+        <form id="notificationForm" class="notification-form">
+            <div class="form-group">
+                <label for="subject">Subject:</label>
+                <input type="text" id="subject" name="subject" required>
+            </div>
+
+            <div class="form-group">
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+            </div>
+
+            <div class="form-group full-width">
+                <button type="submit">Send Notification</button>
+            </div>
+        </form>
+        
+        <form id="notificationForm">
+
+            <div class="form-group">
+                <label for="template">Choose a Template:</label>
+                <select id="template" name="template">
+                    <option value="">-- Select a template --</option>
+                    <option value="reminder">Reminder: Pantry open today</option>
+                    <option value="thanks">Thank you for visiting!</option>
+                    <option value="update">Update: New pantry hours</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="Food">Food:</label>
+                <input type="text" id="food" name="food" required>
+            </div>
+
+            <div class="form-group">
+                <label for="Campus">Campus:</label>
+                <input type="text" id="campus" name="campus" required>
+            </div>
+
+            <div class="form-group">
+                <label for="Date">Date:</label>
+                <input type="text" id="date" name="date" required>
+            </div>
+
+            <div class="form-group full-width">
+                <button type="submit" id="send-template-button">Send Notification</button>
+            </div>
+        </form>
+
+
+        <!-- Notif Log -->
+        <div class="log">
+            <h2>Notification Log</h2>
+            <ul id="logList">
+                <li>
+                    <strong>Subject: </strong>Food<br>
+                    <strong>Message: </strong>Go find food at the Sylvania Campus<br>
+                    <span><strong>Sent by: </strong>John Doe | <strong>Date & Time: 
+                    </strong>4/15/25 4:13PM<strong> | Subscribers: </strong>112</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

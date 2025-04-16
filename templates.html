@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Messaging Templates</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="standard-header">
+    <h1>Messaging Templates for PCC Food Pantry</h1>
+  </header>
+
+  <main>
+    <div class="template-container">
+      <section class="template-creator">
+        <a class="home-link" href="index.html">&#10229; Return to Home</a>
+        <h2>Create New Template</h2>
+        <form id="template-form">
+          <label for="template-name">Template Name:</label>
+          <input type="text" id="template-name" name="template-name" required />
+
+          <label for="subject">Subject:</label>
+          <input type="text" id="subject" name="subject" required />
+
+          <label for="message-body">Message Body:</label>
+          <textarea id="message-body" name="message-body" placeholder="Include tags like {{date}}, {{time}}, {{campus}}, {{food item}}"></textarea>
+
+          <button type="submit">Save Template</button>
+        </form>
+      </section>
+
+      <section class="template-list">
+        <h2>Saved Templates</h2>
+        <ul id="templates-display">
+          <li>
+            <strong>New Food Available</strong><br>
+            <em>Subject:</em> Food is now available on multiple campuses<br>
+            <em>Body:</em> Please go to {{Campus 1}} or {{Campus 2}} to find a new supply of {{Food}};
+          </li>
+          <li>
+            <strong>Test Template</strong><br>
+            <em>Subject:</em> asdasd<br>
+            <em>Body:</em> This is a second template
+          </li>
+        </ul>
+      </section>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
